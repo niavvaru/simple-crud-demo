@@ -1,0 +1,24 @@
+<section class="tasks">
+	<section class="add-task-section col-sm-6 col-xs-12">
+		<h1>Add Task</h1>
+		<p>Type the name of a task and hit +</p>
+		<form name="taskform" class="form-inline" ng-submit="addTask()" novalidate>
+			<input type="text" placeholder="Task Name" name="taskName" ng-model="taskName" class="form-control" ng-required="true"/>
+			<button type="submit" class="btn" ng-disabled="taskform.$invalid">+</button>
+		</form>
+
+	</section>
+	<section class="task-list col-sm-6 col-xs-12">
+		<table class="table table-responsive">
+			<thead>
+				<th>Task Name (Click to edit)</th>
+				<th>Delete</th>
+			</thead>
+			<tr ng-repeat="(key, task) in tasks">
+				<td><form name="taskEditForm_{{$index}}" novalidate><span editable-text-box>{{task.name}}</span></form></td>
+				<td><a ng-click="deleteTask(key)">Delete</a></td>
+			</tr>
+		</table>
+		
+	</section>
+</section>

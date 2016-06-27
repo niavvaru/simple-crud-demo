@@ -1,0 +1,1 @@
+angular.module('myApp').constant('FIREBASE_URL', 'https://nirmal-test.firebaseio.com/');

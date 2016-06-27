@@ -1,0 +1,43 @@
+<section class="signup">
+	<div class="heading text-center">
+		<h2>Sign Up</h2>
+		<p class="error-message">{{error}}</p>
+	</div>
+	<form name="myForm" class="form-horizontal" ng-submit="signUp()" novalidate>
+		<div class="form-group">
+			<label class="col-sm-2" for="firstname">First Name</label>
+			<div class="col-sm-10">
+				<input class="form-control" type="text" name="firstname" id="firstname" placeholder="First Name" ng-required="true" ng-model="user.firstname"/>
+				<span class="error-message" ng-show="myForm.firstname.$dirty && myForm.firstname.$error.required">First name is mandatory</span>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2" for="email">Last Name</label>
+			<div class="col-sm-10">
+				<input class="form-control" type="text" name="lastname" id="lastname" placeholder="Last Name" ng-required="true" ng-model="user.lastname"/>
+				<span class="error-message" ng-show="myForm.lastname.$dirty && myForm.lastname.$error.required">Last name is mandatory</span>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2" for="email">Email Address</label>
+			<div class="col-sm-10">
+				<input class="form-control" type="text" name="email" id="email" placeholder="Email" ng-required="true" ng-model="user.email" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z.]+\.[a-z.]{2,5}$/"/>
+				<span class="error-message" ng-show="myForm.email.$dirty && myForm.email.$error.required">Email id is mandatory</span>
+				<span class="error-message" ng-show="myForm.email.$dirty && myForm.email.$error.pattern">Please enter a valid email id</span>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2" for="password">Password</label>
+			<div class="col-sm-10">
+				<input class="form-control" type="password" name="password" id="password" placeholder="Password" ng-required="true" ng-model="user.password"/>
+				<span class="error-message" ng-show="myForm.password.$dirty && myForm.password.$error.required">Password is mandatory</span>
+			</div>
+		</div>
+		<div class="form-group">
+    	<div class="col-sm-offset-2 col-sm-10 ">
+	      	<button type="submit" class="btn btn-default" ng-disabled="myForm.$invalid">Sign Up</button>
+	      	<p>or <a href="#/login">Log In</a></p>
+    	</div>
+  	</div>
+	</form>
+</section>

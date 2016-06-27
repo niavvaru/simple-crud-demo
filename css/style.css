@@ -1,0 +1,72 @@
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+header {
+	box-shadow: 0px 1px 1px 0px rgba(133,133,133,1);
+	margin: 0;
+	padding: 20px 0;
+}
+header .content {
+  width: 95%;
+  max-width: 850px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card {
+	background: white;
+  width: 95%;
+  max-width: 850px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 40px;
+  position: relative;
+  opacity: .95;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 1px 0 rgba(0,0,0,.25);
+}
+.error-message {
+	color: red;
+}
+input.ng-dirty.ng-invalid {
+	border-color: red;
+}
+.btn-delete { 
+    background-color: #C94C24; 
+    background-image: url(../images/icons/icon_trash.png); 
+}
+.btn-task {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-bottom: 0;
+  font-size: 1.3rem;
+  font-size: 400;
+  line-height: 140%;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: #C61C6F;
+  color: white;
+  background-color: #2D8BCF;
+  background-size: 18px 18px;
+  min-width: 28px;
+  min-height: 28px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
