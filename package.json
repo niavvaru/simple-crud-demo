@@ -1,0 +1,25 @@
+{
+  "name": "'simple-to-do-app",
+  "version": "1.0.0",
+  "description": "A simple to-do app developed using angular js, firebase; demonstrating how to perform CRUD operations using AngularJS.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/niavvaru/simple-crud-demo.git"
+  },
+  "keywords": [
+    "angularjs",
+    "firebase",
+    "bootstrap",
+    "angularfire"
+  ],
+  "author": "Nirmal Santhosh Avvaru",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niavvaru/simple-crud-demo/issues"
+  },
+  "homepage": "https://github.com/niavvaru/simple-crud-demo#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-wiredep": "^3.0.1"
+  }
+}
