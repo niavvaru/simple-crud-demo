@@ -3,7 +3,7 @@
 		<h1>Add Task</h1>
 		<p>Type the name of a task and hit +</p>
 		<form name="taskform" class="form-inline" ng-submit="addTask()" novalidate>
-			<input type="text" placeholder="Task Name" name="taskName" ng-model="taskName" class="form-control" ng-required="true"/>
+			<input type="text" placeholder="Task Name" name="taskName" ng-model="taskName" class="form-control" ng-required="true" ng-pattern="/^[A-z,0-9]+[A-z,0-9,\s]{1,100}/"/>
 			<button type="submit" class="btn" ng-disabled="taskform.$invalid">+</button>
 		</form>
 
@@ -15,7 +15,9 @@
 				<th>Delete</th>
 			</thead>
 			<tr ng-repeat="(key, task) in tasks">
-				<td><form name="taskEditForm_{{$index}}" novalidate><span editable-text-box>{{task.name}}</span></form></td>
+				<td>
+					<inline-edit edit-item="task" save-call-back="$parent.editTask(task)"></inline-edit>
+				</td>
 				<td><a ng-click="deleteTask(key)">Delete</a></td>
 			</tr>
 		</table>
